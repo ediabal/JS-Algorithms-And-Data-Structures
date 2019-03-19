@@ -1,0 +1,2 @@
+# Algorithms & Data Structures
+All algorithms and data structures implemented in the repo will be in JavaScript and can be used as a reference to learn or better understand how these data structures and algorithms work.
