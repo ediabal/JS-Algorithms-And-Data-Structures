@@ -1,15 +1,24 @@
 /* Binary Search: O(log(n))
  *
- * The binary search algorithm works by narrowing down an array into smaller
- * sections until the value is found. A window is created by setting an index
- * to the beginning of a section and an index for the end. Once you have a window
- * the middle can be calculated and determine if the value of that index is greater
- * than or less the value you are searching for. If the middle indexed value is greater
- * than the value being searched for, then the end index can be set to the middle
- * index - 1 to narrow the search window. Or if the middle indexed value is lesser,
- * the start index can be set to the middle index + 1. This is repeated until the
- * middle indexed value is equal to value being search for, returning that value, or
- * the start index becoming larger than the end index which signifies the value not
+ * The binary search algorithm works by narrowing down a sorted array into smaller
+ * sections until the value is found.
+ * 
+ * A window is created by setting an index to the beginning (start) of the array
+ * and an index for the end. Once there are indices for the window the middle
+ * index can be calculated.
+ * 
+ * If the middle indexed value is greater than the value being searched for then
+ * the end index can be set to the middle index - 1. This is because we know that
+ * if the value is in the array, it has to be in the first half.
+ * 
+ * If the middle indexed value is lesser the start index can be set to the middle
+ * index + 1. This means that the value is in the second half.
+ * 
+ * After updating the start/end index the middle can be calculated again and the
+ * previous two steps can be repeated until the middle value is equal to value
+ * being search. 
+ * 
+ * If the start index becoming larger than the end index which signifies the value not
  * being in the array.
  * 
  * The complexity of this search algorithm is O(log(n)). This is because each time
