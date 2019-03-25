@@ -204,4 +204,23 @@ class SinglyLinkedList {
     }
     return this;
   }
+  
+  /* prints the list
+   * Complexity: O(n)
+  */
+  print() {
+    // initialize an array to print
+    const arr = [];
+    // start at the head
+    let currentNode = this.head;
+    // iterate over the list until the end
+    while(currentNode) {
+      // push the value to the array
+      arr.push(currentNode.val);
+      // update the currentNode to the next node
+      currentNode = currentNode.next;
+    }
+    // log the array
+    console.log(arr);
+  }
 }
