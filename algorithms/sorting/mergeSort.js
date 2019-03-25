@@ -53,7 +53,7 @@ const mergeSort = (arr) => {
   // recursively break down the left side of the array until it becomes a sorted array.
   const left = mergeSort(arr.slice(0, mid));
   // recursively break down the right side of the array until it becomes a sorted array.
-  let right = mergeSort(arr.slice(mid));
+  const right = mergeSort(arr.slice(mid));
   // merge the two sorted sides back into one sorted array.
   return merge(left, right);
 };
