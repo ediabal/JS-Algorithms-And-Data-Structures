@@ -52,6 +52,6 @@ class Stack {
     }
     // decrease the length
     this.length--;
-    return firstNode;
+    return firstNode.val;
   }
 }
