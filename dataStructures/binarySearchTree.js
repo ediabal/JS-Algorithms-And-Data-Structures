@@ -56,4 +56,64 @@ class BinarySearchTree {
       }
     }
   }
+
+  /* visits every sibling node before moving on to the children nodes
+   * 
+  */
+  breadthFirst(node = this.root) {
+    const queue = [], visited = [];
+    if (node) queue.push(node);
+    while (queue.length > 0) {
+      node = queue.shift();
+      visited.push(node.val);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return visited;
+  }
+
+  /* traverses the entire tree by going down the left most node completely before
+   * moving on to the right.
+   *
+  */
+  depthFirstPreOrder(root = this.root) {
+    const visited = [];
+    const visit = (node) => {
+      visited.push(node.val);
+      if (node.left) visit(node.left);
+      if (node.right) visit(node.right);
+    };
+    if (root) visit(root);
+    return visited;
+  }
+
+  /* traverses the entire tree by going down the left most node completely before
+   * moving on to the right and then adds the nodes after the traversal.
+   *
+  */
+  depthFirstPostOrder(root = this.root) {
+    const visited = [];
+    const visit = (node) => {
+      if (node.left) visit(node.left);
+      if (node.right) visit(node.right);
+      visited.push(node.val);
+    };
+    if (root) visit(root);
+    return visited;
+  }
+
+  /* traverses the entire tree by going down the left most node completely then
+   * adds the nodes before moving on to the right.
+   *
+  */
+  depthFirstInOrder(root = this.root) {
+    const visited = [];
+    const visit = (node) => {
+      if (node.left) visit(node.left);
+      visited.push(node);
+      if (node.right) visit(node.right);
+    }
+    if (root) visit(root);
+    return visited;
+  }
 }
