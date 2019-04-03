@@ -3,11 +3,11 @@
  * The radix sort works by bucketing the values according to their values
  * at a certain digit. Unlike other sorting methods this one doesn't actually
  * do any comparisons.
- * 
+ *
  * The complexity of this algorithm is O(nk) due to having to iterate over
  * the maximum number of digits possible and the number of elements in the
  * array.
-*/
+ */
 const getDigit = (num, place) => {
   // get the digit at the provided place by taking the remainder of
   // the absolute value divided by 10 to the power of the place
@@ -15,14 +15,14 @@ const getDigit = (num, place) => {
   return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
 };
 
-const digitCount = (num) => {
+const digitCount = num => {
   if (num === 0) return 1;
   // find the number of digits by taking log base 10 of the absolute
   // value of the number
   return Math.floor(Math.log10(Math.abs(num))) + 1;
-}
+};
 
-const maxDigits = (nums) => {
+const maxDigits = nums => {
   let max = 0;
   // iterate over the numbers until max equals the number with the
   // most digits.
@@ -32,7 +32,7 @@ const maxDigits = (nums) => {
   return max;
 };
 
-const radixSort = (nums) => {
+const radixSort = nums => {
   // find the maximum number of digits
   let maxDigitCount = maxDigits(nums);
   // iterate for each 10's place

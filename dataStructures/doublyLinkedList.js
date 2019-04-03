@@ -16,7 +16,7 @@ class DoublyLinkedList {
 
   /* add a node to the end of the list
    * Complexity: O(1)
-  */
+   */
   push(val) {
     // create a newNode for the value
     const newNode = new Node(val);
@@ -39,7 +39,7 @@ class DoublyLinkedList {
 
   /* remove the last node from the list
    * Complexity: O(1)
-  */
+   */
   pop() {
     // if the list is empty there's no node to pop
     if (!this.head) return undefined;
@@ -64,7 +64,7 @@ class DoublyLinkedList {
 
   /* remove the node from the front of the list
    * Complexity: O(1)
-  */
+   */
   shift() {
     // if the list is empty there's nothing to return
     if (!this.head) return undefined;
@@ -89,7 +89,7 @@ class DoublyLinkedList {
 
   /* add a node to the front of the list
    * Complexity: O(1)
-  */
+   */
   unshift(val) {
     const newNode = new Node(val);
     // if the list is empty update the head and tail to the newNode
@@ -111,7 +111,7 @@ class DoublyLinkedList {
 
   /* retrieve the value at a given index
    * Complexity: O(n)
-  */
+   */
   get(index) {
     // index isn't in the list
     if (index < 0 || index >= this.length) return undefined;
@@ -125,7 +125,7 @@ class DoublyLinkedList {
       for (let i = 0; i < index; i++) node = node.next;
     } else {
       // start iterating for the tail
-      node = this.tail
+      node = this.tail;
       // get the prev node until the index is reached
       for (let i = this.length - 1; i > index; i--) node = node.prev;
     }
@@ -134,7 +134,7 @@ class DoublyLinkedList {
 
   /* set the value of a node at a given index
    * Complexity: O(n)
-  */
+   */
   set(index, val) {
     // get the node to be updated
     const node = this.get(index);
@@ -148,7 +148,7 @@ class DoublyLinkedList {
 
   /* insert a node at the given index
    * Complexity: O(n)
-  */
+   */
   insert(index, val) {
     // if the index is not in the list
     if (index < 0 || index > this.length) return false;
@@ -160,7 +160,7 @@ class DoublyLinkedList {
     // create the newNode
     const newNode = new Node(val);
     // find the node before the given index
-    const prevNode =  this.get(index - 1);
+    const prevNode = this.get(index - 1);
     // set the next index on the newNode to the next node on the prevNode
     newNode.next = prevNode.next;
     // set the prev node on the newNode to the prevNode
@@ -174,7 +174,7 @@ class DoublyLinkedList {
 
   /* remove a node at the given index
    * Complexity: O(n)
-  */
+   */
   remove(index) {
     // if the index is not in the list
     if (index < 0 || index >= this.length) return undefined;

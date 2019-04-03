@@ -15,7 +15,7 @@ class Stack {
 
   /* actually works like unshift by adding a node to the start of the stack
    * Complexity: O(1)
-  */
+   */
   push(val) {
     const newNode = new Node(val);
     // if the list is empty set the first and last to the newNode
@@ -34,7 +34,7 @@ class Stack {
 
   /* actually works like shift by removing a node from the start of the stack
    * Complexity: O(1)
-  */
+   */
   pop() {
     // if the list is empty there's nothing to return
     if (!this.first) return null;

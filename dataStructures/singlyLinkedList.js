@@ -19,7 +19,8 @@ class SinglyLinkedList {
    * params:
    * - val: the value of the new node
    * Complexity: O(1)
-  */ 
+   */
+
   push(val) {
     // create a new node
     const newNode = new Node(val);
@@ -40,7 +41,7 @@ class SinglyLinkedList {
 
   /* removes the node at the end of the list
    * Complexity: O(n)
-  */
+   */
   pop() {
     // if the list is empty there is nothing at the end
     if (!this.head) return undefined;
@@ -71,7 +72,7 @@ class SinglyLinkedList {
 
   /* remove the node at the beginning of the list
    * Complexity: O(1)
-  */
+   */
   shift() {
     // if the list is empty there isn't a first node
     if (this.length === 0) return undefined;
@@ -88,7 +89,7 @@ class SinglyLinkedList {
 
   /* add a node to the beginning of the list
    * Complexity: O(1)
-  */
+   */
   unshift(val) {
     // create a node for the new value
     const newHead = new Node(val);
@@ -103,13 +104,13 @@ class SinglyLinkedList {
       this.head = newHead;
     }
     // increase the length of the list
-    this.length +=1;
+    this.length += 1;
     return this;
   }
-  
+
   /* get the node at the given index
    * Complexity: O(n)
-  */
+   */
   get(index) {
     // if the index is not in the length range it's not in the list
     if (index < 0 || index >= this.length) return null;
@@ -123,7 +124,7 @@ class SinglyLinkedList {
 
   /* set the node value at a given index
    * Complexity: O(n)
-  */
+   */
   set(index, val) {
     // get the node to be updated
     const node = this.get(index);
@@ -137,7 +138,7 @@ class SinglyLinkedList {
 
   /* insert a node at the given index
    * Complexity: O(n)
-  */
+   */
   insert(index, val) {
     // if the index is not in the length range it's not in the list
     if (index < 0 || index > this.length) return false;
@@ -145,7 +146,7 @@ class SinglyLinkedList {
     if (index === 0) return !!this.unshift(val);
     // if the index is at the end of the list push the value to the end
     if (index === this.length) return !!this.push(val);
-    
+
     // create a newNode for the value
     const newNode = new Node(val);
     // find the node before the node at the given index
@@ -161,7 +162,7 @@ class SinglyLinkedList {
 
   /* remove a node at the given index
    * Complexity: O(n)
-  */
+   */
   remove(index) {
     // if the index is not in the length range it's not in the list
     if (index < 0 || index > this.length) return undefined;
@@ -183,14 +184,15 @@ class SinglyLinkedList {
 
   /* reverse the values of the list in place
    * Complexity: O(n)
-  */
+   */
   reverse() {
     // start at the head of the list
     let node = this.head;
     // swap the nodes at the head and tail of the list
     [this.head, this.tail] = [this.tail, this.head];
     // initialize the next and prev nodes
-    let next, prev = null;
+    let next,
+      prev = null;
     // iterate over the entire list until the end
     for (let i = 0; i < this.length; i++) {
       // set the next node to the next of the current node
@@ -204,17 +206,17 @@ class SinglyLinkedList {
     }
     return this;
   }
-  
+
   /* prints the list
    * Complexity: O(n)
-  */
+   */
   print() {
     // initialize an array to print
     const arr = [];
     // start at the head
     let currentNode = this.head;
     // iterate over the list until the end
-    while(currentNode) {
+    while (currentNode) {
       // push the value to the array
       arr.push(currentNode.val);
       // update the currentNode to the next node
