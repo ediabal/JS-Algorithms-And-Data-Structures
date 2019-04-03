@@ -15,9 +15,7 @@ class MaxBinaryHeap {
 
   rightChildIndex = index => index * 2 + 2;
 
-  /* Move the value at the given index up to the correct index in the heap.
-   *
-   */
+  /* Move the value at the given index up to the correct index in the heap. */
   bubbleUp = index => {
     // find the parentIndex of the given index
     let parentIndex = this.parentIndex(index);
@@ -30,9 +28,7 @@ class MaxBinaryHeap {
     return this.bubbleUp(parentIndex);
   };
 
-  /* Move the value at the given index down to the correct index in the heap.
-   *
-   */
+  /* Move the value at the given index down to the correct index in the heap. */
   sinkDown = index => {
     const leftIndex = this.leftChildIndex(index),
       rightIndex = this.rightChildIndex(index),
@@ -60,7 +56,7 @@ class MaxBinaryHeap {
 
   /* Inserts a val into the minBinaryHeap and 'bubbles' up the value to
    * the correct index.
-   *
+   * Complexity: O(log(n))
    */
   insert = value => {
     this.values.push(value);
@@ -69,7 +65,7 @@ class MaxBinaryHeap {
 
   /* Extracts the max value from the minBinaryHeap and swaps the last value
    * of the heap to the beginning and 'bubble' it down to the correct position.
-   *
+   * Complexity: O(log(n))
    */
   extractMax = () => {
     const max = this.values[0],

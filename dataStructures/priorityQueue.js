@@ -22,9 +22,7 @@ class PriorityQueue {
 
   rightChildIndex = index => index * 2 + 2;
 
-  /* Move the value at the given index up to the correct index in the queue.
-   *
-   */
+  /* Move the value at the given index up to the correct index in the queue. */
   bubbleUp = index => {
     // find the parentIndex of the given index
     let parentIndex = this.parentIndex(index);
@@ -38,9 +36,7 @@ class PriorityQueue {
     return this.bubbleUp(parentIndex);
   };
 
-  /* Move the node at the given index down to the correct index in the queue.
-   *
-   */
+  /* Move the node at the given index down to the correct index in the queue. */
   sinkDown = index => {
     const leftIndex = this.leftChildIndex(index),
       rightIndex = this.rightChildIndex(index),
@@ -69,7 +65,7 @@ class PriorityQueue {
 
   /* Inserts a node into the PriorityQueue and 'bubbles' up the value to
    * the correct index.
-   *
+   * Complexity: O(log(n))
    */
   enqueue = (val, priority) => {
     this.queue.push(new Node(val, priority));
@@ -78,7 +74,7 @@ class PriorityQueue {
 
   /* Extracts the highest priority node from the PriorityQueue and swaps the last node
    * of the heap to the beginning and 'bubble' it down to the correct position.
-   *
+   * Complexity: O(log(n))
    */
   dequeue = () => {
     const next = this.queue[0],
