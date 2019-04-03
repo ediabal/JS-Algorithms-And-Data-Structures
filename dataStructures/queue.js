@@ -15,7 +15,7 @@ class Queue {
 
   /* works like push by adding a node to the end of the queue
    * Complexity: O(1)
-  */
+   */
   enqueue(val) {
     const newNode = new Node(val);
     // if the queue is empty set the first and last to the newNode
@@ -34,7 +34,7 @@ class Queue {
 
   /* works like shift by removing the node at the front of the queue
    * Complexity: O(1)
-  */
+   */
   dequeue() {
     // if there is nothing in the queue there's nothing to return
     if (!this.first) return null;

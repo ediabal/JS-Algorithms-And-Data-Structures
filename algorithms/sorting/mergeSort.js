@@ -4,14 +4,15 @@
  * each array ends at a size of 1. Once that size is met the arrays are then merged
  * together by iterating over the elements in each of the two arrays and comparing
  * values to keep them sorted.
- * 
+ *
  * The complexity of this algorithm is O(n log(n)) because we are basically iterating
  * over the length of the entire array once when the merges occur and only iterating over
  * a square of the initial array when breaking down the array into smaller chunks.
-*/
+ */
 const merge = (arr1, arr2) => {
   const result = [];
-  let x = 0, y = 0;
+  let x = 0,
+    y = 0;
   // iterate over the arrays while one of the indices is less than the length of
   // it's array
   while (x < arr1.length && y < arr2.length) {
@@ -45,7 +46,7 @@ const merge = (arr1, arr2) => {
   return result;
 };
 
-const mergeSort = (arr) => {
+const mergeSort = arr => {
   // if we've broken down the array into one element, break the loop
   if (arr.length <= 1) return arr;
   // determine the middle index of the array to split it

@@ -1,5 +1,5 @@
 /* Quick Sort: O(n log(n))
- * 
+ *
  * The quick sort algorithm works by pivoting the array by sending the array,
  * the start value of the array and end value of the array. Inside the pivot
  * a point is decided and all values less than that point are pushed to the left
@@ -9,12 +9,12 @@
  * value at the pivot point index and the pivot point index is returned.
  * This pivoting continues to happen for all values left and right of the pivot
  * value until the right side index is less than the left.
- * 
+ *
  * The complexity of this algorithm is O(n log(n)) however in the worst case it
  * can be O(n^2). This happens when the array is already sorted and the min or max
- * value is selected as the pivot. 
-*/
-const swap = (arr, x, y) => [arr[x], arr[y]] = [arr[y], arr[x]];
+ * value is selected as the pivot.
+ */
+const swap = (arr, x, y) => ([arr[x], arr[y]] = [arr[y], arr[x]]);
 
 const pivot = (arr, start = 0, end = arr.length - 1) => {
   // find the value of the pivot
