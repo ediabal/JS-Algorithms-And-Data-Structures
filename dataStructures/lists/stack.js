@@ -1,11 +1,4 @@
 // Stack
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
 class Stack {
   constructor() {
     this.first = null;
@@ -53,5 +46,12 @@ class Stack {
     // decrease the length
     this.length--;
     return firstNode.val;
+  }
+}
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
   }
 }

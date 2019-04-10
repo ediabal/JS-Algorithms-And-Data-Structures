@@ -1,11 +1,4 @@
 // Queue
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
 class Queue {
   constructor() {
     this.first = null;
@@ -53,5 +46,12 @@ class Queue {
     // decrease the length
     this.length--;
     return firstNode.val;
+  }
+}
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
   }
 }
