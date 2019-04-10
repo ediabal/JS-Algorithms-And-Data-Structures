@@ -1,12 +1,4 @@
 // DoublyLinkedList
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.prev = null;
-    this.next = null;
-  }
-}
-
 class DoublyLinkedList {
   constructor() {
     this.head = null;
@@ -195,5 +187,13 @@ class DoublyLinkedList {
     // decrease the length
     this.length--;
     return node;
+  }
+}
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.prev = null;
+    this.next = null;
   }
 }

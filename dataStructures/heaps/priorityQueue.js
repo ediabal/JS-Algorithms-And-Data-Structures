@@ -4,13 +4,6 @@
  * - The priority of the parent is always higher(smaller) than the subsequent children.
  * - All children of parent nodes are filled from the left most first and then the right.
  */
-class Node {
-  constructor(val, priority) {
-    this.val = val;
-    this.priority = priority;
-  }
-}
-
 class PriorityQueue {
   constructor() {
     this.queue = [];
@@ -85,4 +78,11 @@ class PriorityQueue {
     }
     return next;
   };
+}
+
+class Node {
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+  }
 }

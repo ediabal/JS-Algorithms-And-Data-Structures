@@ -1,11 +1,4 @@
 // Hash Table
-class Node {
-  constructor(key, value) {
-    this.key = key;
-    this.value = value;
-  }
-}
-
 class HashTable {
   constructor(size = 53) {
     this.keyMap = new Array(size);
@@ -63,4 +56,11 @@ class HashTable {
     });
     return values;
   };
+}
+
+class Node {
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
 }

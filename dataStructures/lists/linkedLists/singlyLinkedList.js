@@ -1,12 +1,4 @@
 // Singly Linked List
-class Node {
-  // initializes a Node with a value and a pointer to the next element
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
 class SinglyLinkedList {
   // initializes a SinglyLinkedList with a head, tail and length
   constructor() {
@@ -224,5 +216,13 @@ class SinglyLinkedList {
     }
     // log the array
     console.log(arr);
+  }
+}
+
+class Node {
+  // initializes a Node with a value and a pointer to the next element
+  constructor(val) {
+    this.val = val;
+    this.next = null;
   }
 }
